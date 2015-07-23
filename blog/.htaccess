@@ -1,0 +1,18 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+RewriteRule ^article-([0-9]+)\.php$   index.php?module=articles&page=$1 [L]
+RewriteRule ^([0-9]+)-([a-z0-9\-]+)\.php$   index.php?module=articles&page=$1 [L]
+
+RewriteRule ^feed$   rss.php [L]
+
+<files .htaccess>
+order allow,deny
+deny from all
+ </files>
+
+ Options -Indexes
+
+ AddDefaultCharset UTF-8
+ 
+ 
